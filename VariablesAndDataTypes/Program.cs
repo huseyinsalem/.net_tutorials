@@ -126,9 +126,14 @@ namespace VariablesAndDataTypes
             int totalprice = totalchipsprice + totalwaterprice + totallemonedeprice + totalcokeprice + totalhamburgerprice;
             Console.WriteLine("Toplam Tutar:" + totalprice + "TL");
 
+
+            int totalprice2 = totalchipsprice + totalwaterprice + totallemonedeprice + totalcokeprice + totalhamburgerprice;
+            int avareage = totalprice2 / 5;
+            Console.WriteLine("Toplam Tutar:" + totalprice + "TL");
+            Console.WriteLine("Avarage : " +avareage);
+
             #endregion
             Console.Read();
-
         }
     }
 }
