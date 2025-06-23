@@ -10,9 +10,9 @@ namespace VariablesAndDataTypes
     {
         static void Main(string[] args)
         {
-            #region string
 
-            #endregion
+
+            #region string
             string customerName;
             string customerSurname;
             string customerPhone;
@@ -58,6 +58,10 @@ namespace VariablesAndDataTypes
             Console.WriteLine("Email Adresi: " + customerEmail);
             Console.WriteLine("Adres: " + District + "/" + city);
             Console.WriteLine("----------------------------------");
+
+            #endregion
+
+
 
             #region int
             Console.WriteLine();
@@ -125,14 +129,100 @@ namespace VariablesAndDataTypes
 
             int totalprice = totalchipsprice + totalwaterprice + totallemonedeprice + totalcokeprice + totalhamburgerprice;
             Console.WriteLine("Toplam Tutar:" + totalprice + "TL");
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine();
+            Console.WriteLine();
+            #endregion
 
 
-            int totalprice2 = totalchipsprice + totalwaterprice + totallemonedeprice + totalcokeprice + totalhamburgerprice;
-            int avareage = totalprice2 / 5;
-            Console.WriteLine("Toplam Tutar:" + totalprice + "TL");
-            Console.WriteLine("Avarage : " +avareage);
+
+            // DECISION STRUCTURES 
+
+            #region if  else
+
+
+            string capital, country;
+            Console.Write("enter the capital: ");
+            capital = Console.ReadLine();
+
+            Console.Write("enter the country: ");
+            country = Console.ReadLine();
+
+            if(capital=="Türkiye" & country=="Ankara" )
+            {
+                Console.WriteLine("data verified");
+            }
+            else
+            {
+                Console.WriteLine("incorrect information");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------");
+
+
+
+
+            int exam1, exam2, exam3, average;
+            string result="";
+
+            Console.Write("note1: ");
+            exam1=int.Parse(Console.ReadLine());
+            Console.Write("note2: ");
+            exam2 = int.Parse(Console.ReadLine());
+            Console.Write("note3: ");
+            exam3 = int.Parse(Console.ReadLine());
+
+
+
+            average = (exam1 + exam2 + exam3) / 3;
+            Console.WriteLine("average of exams: " + average);
+
+            if (average > 0 & average < 50)
+            {
+                Console.WriteLine(" result is mediocre");
+            }
+            if (average > 50 & average < 80)
+            {
+                Console.WriteLine("result is medium");
+            }
+
+            if (average > 80)
+            {
+                Console.WriteLine("result is good");
+            }
+            Console.WriteLine(result) ;
+
+
+
 
             #endregion
+
+
+
+            #region switch case
+
+            Console.WriteLine("Please log in to the lessons");
+            int numberLessons=int.Parse(Console.ReadLine());
+
+
+            switch(numberLessons)
+            {
+                case 1: Console.WriteLine("maths"); break;
+                case 2: Console.WriteLine("Turkish"); break;
+                case 3: Console.WriteLine("biology"); break;
+                case 4: Console.WriteLine("English"); break;
+                case 5: Console.WriteLine("chemical"); break;
+                case 6: Console.WriteLine("physical"); break;
+               default: Console.WriteLine("incorrect entry");break;
+
+            }
+
+            #endregion
+
+
+
             Console.Read();
         }
     }
