@@ -11,7 +11,7 @@ namespace VariablesAndDataTypes
         static void Main(string[] args)
         {
 
-
+ 
             #region string
             string customerName;
             string customerSurname;
@@ -194,7 +194,7 @@ namespace VariablesAndDataTypes
             }
             Console.WriteLine(result) ;
 
-
+            Console.WriteLine("---------------------------------");
 
 
             #endregion
@@ -215,13 +215,105 @@ namespace VariablesAndDataTypes
                 case 4: Console.WriteLine("English"); break;
                 case 5: Console.WriteLine("chemical"); break;
                 case 6: Console.WriteLine("physical"); break;
-               default: Console.WriteLine("incorrect entry");break;
-
+                default: Console.WriteLine("incorrect entry");break;
+          
             }
 
             #endregion
 
 
+
+            //LOOPS
+
+
+            #region For loop
+
+
+            Console.WriteLine("---------------------------------");
+
+
+
+
+            Console.Write("please enter a value on the screen: ");
+            int finishValue = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= finishValue; i++)
+            {
+                Console.WriteLine("I love you");
+            }
+
+
+            Console.WriteLine("---------------------------------");
+            #endregion
+
+
+            
+
+            #region decision structures with for loop
+
+
+
+            for (int i =1; i<=30; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine();
+
+
+            int totalValue = 1;
+            for(int i =1;i<=10;i++)
+            {
+                totalValue += i;
+            }
+            Console.WriteLine(totalValue);
+
+
+            Console.WriteLine("---------------------------------");
+
+
+
+
+            int totalValue2 = 0;
+             for(int i = 1;i<=20; i++)
+            {
+                if(i % 2 == 0)
+                {
+                    totalValue2 += i;
+                    Console.WriteLine(i);
+                }
+
+                
+                
+            }
+            Console.WriteLine("-----");
+            Console.WriteLine(totalValue2);
+
+
+
+            Console.WriteLine("---------------------------------");
+            #endregion
+
+
+
+
+            #region while
+
+
+            int number = 1;
+            while (number <= 10)
+            {
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine(number);
+                }
+                number++;
+            }
+            #endregion
 
             Console.Read();
         }
