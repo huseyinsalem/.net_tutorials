@@ -300,7 +300,6 @@ namespace VariablesAndDataTypes
 
 
 
-
             #region while
 
 
@@ -314,6 +313,50 @@ namespace VariablesAndDataTypes
                 number++;
             }
             #endregion
+
+
+
+            //ARRAYS
+
+
+            #region Arrays
+
+
+            Console.WriteLine("---------------------------------");
+
+            string[] colors = { "Yellow", "Red", "Black", "Orange", "Green", "Blue" };
+
+            for(int i=0;i<colors.Length;i++)
+            {
+                Console.WriteLine(colors[i]);
+            }
+
+            Console.WriteLine("---------------------------------");
+
+
+            int[] numbers = { 6, 20, 100, 522, 400, 888, 456 };
+
+            for(int i=0;i<numbers.Length;i++)
+            {
+                if (numbers[i] % 3 == 0)
+                {
+                    Console.WriteLine(numbers[i]);
+                }
+            }
+
+            Console.WriteLine("---------------------------------");
+
+
+            int[] numbers2 = { 56, 12, 48, 65, 321, 35, 487 };
+            Array.Sort(numbers2);
+            for(int i=0;i<numbers2.Length; i++)
+            {
+                Console.WriteLine(numbers2[i]);
+            }
+
+
+            #endregion
+
 
             Console.Read();
         }
