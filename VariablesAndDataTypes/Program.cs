@@ -379,8 +379,11 @@ namespace VariablesAndDataTypes
             #region exam system application
 
 
+
+            Console.WriteLine("----------------------------------");
+
+
             Console.WriteLine("***** EXAM APPLICATION *****");
-            Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
 
@@ -432,7 +435,38 @@ namespace VariablesAndDataTypes
             #endregion
 
 
+
+
+
+            //METHODS
+
+
+            #region methods
+            Console.WriteLine("----------------------------------");
+
+            void customercard(string name,string surName)
+            {
+                Console.WriteLine("Customer: "+name+" "+surName); 
+            }
+            customercard("Hüseyin","Salem");
+            customercard("Zeliş", "Öztürk");
+
+            Console.WriteLine("----------------------------------");
+
+
+            void sum(int number1, int number2,int number3)
+            {
+                int result1 = number1 + number2 + number3;
+                Console.WriteLine(result1);
+            }
+            sum(4, 6, 7);
+
+            Console.WriteLine("----------------------------------");
+
+            #endregion
+
             Console.Read();
         }
+
     }
 }
