@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -464,6 +465,74 @@ namespace VariablesAndDataTypes
             Console.WriteLine("----------------------------------");
 
             #endregion
+
+
+
+
+            #region list
+
+            List<int>numberlist = new List<int>();
+
+
+            numberlist.Add(15);
+            numberlist.Add(50);
+            numberlist.Add(47);
+            numberlist.Add(89);
+            numberlist.Add(25);
+            numberlist.Add(75);
+
+
+            List<string> Colorlist=new List<string>();
+            Colorlist.Add("red");
+            Colorlist.Add("yellow");
+            Colorlist.Add("black");
+            Colorlist.Add("blue");
+
+            Console.WriteLine(numberlist.Count);
+            Console.WriteLine(Colorlist.Count);
+
+
+            foreach(string i in Colorlist) 
+                Console.WriteLine(i);
+
+
+
+
+
+            #endregion
+
+
+
+
+            #region arrayList
+
+            Console.WriteLine("--------");
+
+
+
+            ArrayList list = new ArrayList();
+            list.Add(25);
+            list.Add("Hüseyin");
+            list.Add('A');
+            list.Add(true);
+
+            foreach(var i  in list)
+                Console.WriteLine(i);
+
+
+
+            Console.WriteLine("*** addRange ***");
+
+
+            List<int>number5 = new List<int>() {1,5,8,20,56,47,89 };
+            list.AddRange(number5);
+            foreach(var i in list)
+                Console.WriteLine(i);
+
+
+
+            #endregion
+
 
             Console.Read();
         }
