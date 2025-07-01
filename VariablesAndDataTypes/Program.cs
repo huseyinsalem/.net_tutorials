@@ -358,6 +358,80 @@ namespace VariablesAndDataTypes
             #endregion
 
 
+
+            #region foreachLoop
+
+            Console.WriteLine("---------------------------------");
+
+
+
+
+            int[] numbers1 = { 45, 86, 15, 28, 456, 89, 159 };
+            foreach(int x in numbers1)
+            {
+                Console.WriteLine(x);
+            }
+
+            #endregion
+
+
+
+            #region exam system application
+
+
+            Console.WriteLine("***** EXAM APPLICATION *****");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+            Console.WriteLine("------------------------------");
+
+            Console.Write("How many students are there in your class: ");
+            int studentcount=int.Parse(Console.ReadLine());
+
+            Console.WriteLine("------------------------------");
+
+
+
+
+
+            string[] studentNames= new string[studentcount];
+            double[] studentExamAvg=new double[studentcount];
+
+            for (int i=0; i< studentcount;i++)
+            {
+                Console.Write($"{i+1} Enter the student's name: ");
+                studentNames[i] = Console.ReadLine();
+
+
+
+                double totalExamResult = 0;
+
+
+
+
+                for(int j=0; j<3; j++)
+                {
+                    Console.Write($"{studentNames[i]}The student named {j+1} Enter the exam score: ");
+                    double value =double.Parse(Console.ReadLine());
+                    totalExamResult += value;
+                }
+
+                studentExamAvg[i] = totalExamResult / 3;
+
+            }
+
+            for (int i=0;i<studentcount;i++)
+            {
+                Console.WriteLine($"{studentNames[i]}The average of the student named: {studentExamAvg[i]}");
+            }
+
+
+
+            #endregion
+
+
             Console.Read();
         }
     }
